@@ -147,6 +147,7 @@
                         <verbose>true</verbose>
                         <skipTestProject>false</skipTestProject>
 			<postReleaseGoals>deploy</postReleaseGoals>
+			<releaseVersion>${project.version}-RELEASE</releaseVersion>
                         <!-- <postFeatureFinishGoals>deploy</postFeatureFinishGoals> -->
                         <gitFlowConfig>
                             <productionBranch>master</productionBranch>
