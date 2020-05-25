@@ -145,8 +145,8 @@
                         <pushRemote>true</pushRemote>
                         <versionDigitToIncrement>1</versionDigitToIncrement>
                         <verbose>true</verbose>
-                        <skipTestProject>false</skipTestProject>
-			<postReleaseGoals>deploy</postReleaseGoals>
+                        <skipTestProject>true</skipTestProject>
+			<postReleaseGoals>install</postReleaseGoals>
 				<!-- <releaseVersion>${project.version}-RELEASE</releaseVersion> -->
 			<digitsOnlyDevVersion>true</digitsOnlyDevVersion>
                         <!-- <postFeatureFinishGoals>deploy</postFeatureFinishGoals> -->
