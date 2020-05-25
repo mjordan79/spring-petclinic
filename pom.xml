@@ -143,7 +143,7 @@
                     <configuration>
                         <installProject>true</installProject>
                         <pushRemote>true</pushRemote>
-                        <versionDigitToIncrement>1</versionDigitToIncrement>
+                        <versionDigitToIncrement>2</versionDigitToIncrement>
                         <verbose>true</verbose>
                         <skipTestProject>true</skipTestProject>
 			<postReleaseGoals></postReleaseGoals>
