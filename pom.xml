@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
-  <version>2.3.0.BUILD-SNAPSHOT</version>
+  <version>2.3.0</version>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -135,7 +135,32 @@
 
   <build>
     <plugins>
-      <plugin>
+	    
+       <plugin>
+                    <groupId>com.amashchenko.maven.plugin</groupId>
+                    <artifactId>gitflow-maven-plugin</artifactId>
+                    <version>1.14.0</version>
+                    <configuration>
+                        <installProject>true</installProject>
+                        <pushRemote>true</pushRemote>
+                        <versionDigitToIncrement>1</versionDigitToIncrement>
+                        <verbose>true</verbose>
+                        <skipTestProject>false</skipTestProject>
+			<postReleaseGoals>versions:set -DnewVersion=${project.version}-RELEASE -DprocessAllModules,deploy</postReleaseGoals>
+                        <!-- <postFeatureFinishGoals>deploy</postFeatureFinishGoals> -->
+                        <gitFlowConfig>
+                            <productionBranch>master</productionBranch>
+                            <developmentBranch>dev</developmentBranch>
+                            <featureBranchPrefix>feature/</featureBranchPrefix>
+                            <releaseBranchPrefix>test/</releaseBranchPrefix>
+                            <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+                            <supportBranchPrefix>support/</supportBranchPrefix>
+                            <versionTagPrefix></versionTagPrefix>
+                            <origin>origin</origin>
+                        </gitFlowConfig>
+                    </configuration>
+                </plugin>
+       <plugin>
         <groupId>io.spring.javaformat</groupId>
         <artifactId>spring-javaformat-maven-plugin</artifactId>
         <version>${spring-format.version}</version>
