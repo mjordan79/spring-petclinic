@@ -146,7 +146,8 @@
                         <versionDigitToIncrement>1</versionDigitToIncrement>
                         <verbose>true</verbose>
                         <skipTestProject>false</skipTestProject>
-			<postReleaseGoals>versions:set -DnewVersion=${project.version}-RELEASE -DprocessAllModules,deploy</postReleaseGoals>
+			<postReleaseGoals>deploy</postReleaseGoals>
+			<releaseVersion>${project.version}-RELEASE</releaseVersion>
                         <!-- <postFeatureFinishGoals>deploy</postFeatureFinishGoals> -->
                         <gitFlowConfig>
                             <productionBranch>master</productionBranch>
