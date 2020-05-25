@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
-  <version>2.3.0-RELEASE</version>
+  <version>2.3.0-RELEAS</version>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -148,6 +148,7 @@
                         <skipTestProject>false</skipTestProject>
 			<postReleaseGoals>deploy</postReleaseGoals>
 			<releaseVersion>${project.version}-RELEASE</releaseVersion>
+			<digitsOnlyDevVersion>true</digitsOnlyDevVersion>
                         <!-- <postFeatureFinishGoals>deploy</postFeatureFinishGoals> -->
                         <gitFlowConfig>
                             <productionBranch>master</productionBranch>
